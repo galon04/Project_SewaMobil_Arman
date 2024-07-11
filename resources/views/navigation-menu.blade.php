@@ -11,9 +11,31 @@
                 </div>
 
                 <!-- Navigation Links -->
+                <!-- Brand Section -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('admin.brands.index') }}" :active="request()->routeIs('admin.brands.index')">
                       {{ __('Brand') }}
+                    </x-nav-link>
+                  </div>
+
+                <!-- Type Section -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('admin.types.index') }}" :active="request()->routeIs('admin.types.index')">
+                      {{ __('Type') }}
+                    </x-nav-link>
+                  </div>
+
+                <!-- Item Section -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('admin.items.index') }}" :active="request()->routeIs('admin.items.index')">
+                      {{ __('Item') }}
+                    </x-nav-link>
+                  </div>
+
+                <!-- Booking Section -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('admin.bookings.index') }}" :active="request()->routeIs('admin.bookings.index')">
+                      {{ __('Booking') }}
                     </x-nav-link>
                   </div>
             </div>
@@ -137,8 +159,24 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+            <!-- Brand Section -->
             <x-responsive-nav-link href="{{ route('admin.brands.index') }}" :active="request()->routeIs('admin.brands.index')">
                 {{ __('Brand') }}
+              </x-responsive-nav-link>
+
+            <!-- Type Section -->
+            <x-responsive-nav-link href="{{ route('admin.types.index') }}" :active="request()->routeIs('admin.types.index')">
+                {{ __('Type') }}
+              </x-responsive-nav-link>
+
+            <!-- Item Section -->
+            <x-responsive-nav-link href="{{ route('admin.items.index') }}" :active="request()->routeIs('admin.items.index')">
+                {{ __('Item') }}
+              </x-responsive-nav-link>
+
+            <!-- Booking Section -->
+            <x-responsive-nav-link href="{{ route('admin.bookings.index') }}" :active="request()->routeIs('admin.bookings.index')">
+                {{ __('Booking') }}
               </x-responsive-nav-link>
         </div>
 
